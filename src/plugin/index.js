@@ -54,6 +54,8 @@
 		content.style.display='flex';
 		back.style.opacity=0;
 		title.innerText = 'What\'s on your mind?';
+		warning.innerText = '';
+		warning.style.display='none';
 	}
 	function submitForm() {
 		// Validate data
