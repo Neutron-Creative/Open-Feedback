@@ -13,6 +13,7 @@
 	let warning = document.getElementById('sl-of-warning');
 	let widget = document.getElementById('sl-of-widget');
 	let destination, destinationEmoj;
+	let discord_webhook_url = new URLSearchParams(window.location.search).get('discord') || null;
 	
 	bug.addEventListener('click', goto);
 	idea.addEventListener('click', goto);
@@ -65,7 +66,7 @@
 			warning.style.display='none'; // Remove warning
 		};
 		var request = new XMLHttpRequest();
-		request.open("POST", "https://discord.com/api/webhooks/799417494418227270/WV22t9QsBF8gglxXYwBlsHYRA_ccY_H15QLY0GQZrsuKhwuiTIgSaVBUFsEkp1Ut2-8t");
+		request.open("POST", discord_webhook_url);
 
 		request.setRequestHeader('Content-type', 'application/json');
 		
