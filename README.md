@@ -3,7 +3,7 @@ The open-source feedback collection tool for your website or web-app.
 
 <p>
     <a href="https://github.com/Neutron-Creative/Singlelink/projects/1">
-        <img src="https://img.shields.io/badge/Public%20Beta-2.2.8-%2303d2d4" alt="Version">
+        <img src="https://img.shields.io/badge/Work%20In%20Progress-0.1.0-%2303d2d4" alt="Version">
     </a>
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
         <img src="https://img.shields.io/badge/License-LGPL-%236ab04c" alt="License"/>
@@ -23,7 +23,6 @@ The open-source feedback collection tool for your website or web-app.
 
 > Coming soon
 
-<br>
 <h2>Related</h2>
 
 > Coming soon
