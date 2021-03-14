@@ -82,11 +82,11 @@ function bundle() {
 }
 
 function watch() {
-    gulp.watch(paths.plugin.html, html);
-    gulp.watch(paths.plugin.css.src, css);
-    gulp.watch(paths.plugin.js.src, js);
-    gulp.watch(paths.root.src, root);
-    gulp.watch(paths.bundle.src, bundle);
+    gulp.watch(paths.plugin.html, build);
+    gulp.watch(paths.plugin.css.src,build);
+    gulp.watch(paths.plugin.js.src, build);
+    gulp.watch(paths.root.src, build);
+    gulp.watch(paths.bundle.src, build);
 }
 
 const build = gulp.series(clean, gulp.series(gulp.parallel( root, html, css, js), bundle));
