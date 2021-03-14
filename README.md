@@ -20,7 +20,7 @@ The open-source feedback collection tool for your website or web-app.
 <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is a free & open-source alternative to <a href="https://feedback.fish">Feedback Fish</a> by the team at <a href="https://singlelink.co">singlelink.co</a>. <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is 100% self-hosted & unmaintained, <b>so please use at your own risk.</b> Built for internal use for <a href="https://singlelink.co">singlelink.co</a>, <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> attempts to replicate <a href="https://feedback.fish">Feedback Fish</a> as affordably as possibly by relying on free & affordable APIs such as Discord & any S3-compatible file store to handle the backend.
 <br>
 <h2>Installation</h2>
-Installing <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is simple and takes just seconds. Add the following code snippet to your desired application somewhere where it will be rendered on all of your desired pages (ex: your page layout file or template). <b>Please ensure to change the config variables as well!</b>
+Installing <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is simple and takes just seconds. Add the following code snippet to your desired application somewhere where it will be rendered on all of your desired pages (ex: your page layout file or template). <b>Please ensure to change the config variables as well!</b><br>
 
 ```html
 <script>
