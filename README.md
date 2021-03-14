@@ -17,11 +17,21 @@ The open-source feedback collection tool for your website or web-app.
 </p>
 <img src="assets/Open-Feedback Github Banner.png">
 <h2>About</h2>
-<a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is a free & open-source alternative to <a href="https://feedback.fish">Feedback Fish</a> by the team at <a href="https://singlelink.co">singlelink.co</a>. <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is 100% self-hosted & unmaintained, so please use at your own risk. Built for internal use for <a href="https://singlelink.co">singlelink.co</a>, <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> attempts to replicate <a href="https://feedback.fish">Feedback Fish</a> as affordably as possibly by relying on free & affordable APIs such as Discord & any S3-compatible file store to handle the backend.
+<a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is a free & open-source alternative to <a href="https://feedback.fish">Feedback Fish</a> by the team at <a href="https://singlelink.co">singlelink.co</a>. <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is 100% self-hosted & unmaintained, **so please use at your own risk.** Built for internal use for <a href="https://singlelink.co">singlelink.co</a>, <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> attempts to replicate <a href="https://feedback.fish">Feedback Fish</a> as affordably as possibly by relying on free & affordable APIs such as Discord & any S3-compatible file store to handle the backend.
 <br>
 <h2>Installation</h2>
+Installing <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is simple and takes just seconds. Add the following code snippet to your desired application somewhere where it will be rendered on all of your desired pages (ex: your page layout file or template). **Please ensure to change the config variables as well!**
 
-> Coming soon
+```html
+<script>
+  window.OPEN_FEEDBACK_CONFIG = {
+    "discord_webhook_url": "<your-discord-webhook-here>",
+    "s3_auth": "<your-s3-authentication-string-here>"
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/gh/Neutron-Creative/Open-Feedback/dist/index.js"></script>
+```
+<br>
 
 <h2>Related</h2>
 
