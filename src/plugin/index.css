@@ -1,0 +1,8 @@
+#sl-of-textarea, #sl-of-submit {
+	transition: box-shadow .2s ease-in;
+	outline: none !important;
+}
+
+#sl-of-textarea:focus, #sl-of-submit:focus {
+	box-shadow: 0 0 0 4px rgba(83,83,236, .5) !important;
+}
