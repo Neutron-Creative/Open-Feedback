@@ -4,6 +4,8 @@
   "description": "The simple open-source feedback collection tool for your website or web-app.",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/Neutron-Creative/OpenFeedback/issues"
   },
-  "homepage": "https://github.com/Neutron-Creative/OpenFeedback#readme"
+  "homepage": "https://github.com/Neutron-Creative/OpenFeedback#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-purgecss": "^4.0.2",
+    "tailwindcss": "^2.0.3"
+  }
 }
