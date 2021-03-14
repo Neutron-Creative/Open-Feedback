@@ -24,8 +24,12 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-css": "^4.0.0",
+    "gulp-inline-source": "^4.0.0",
     "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0",
     "tailwindcss": "^2.0.3"
   }
 }
