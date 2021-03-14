@@ -6,8 +6,6 @@ const cleanCSS = require('gulp-clean-css');
 const purgecss = require('gulp-purgecss')
 const postcss = require('gulp-postcss');
 const htmlmin = require('gulp-htmlmin');
-const inlineSource = require('gulp-inline-source');
-const inlineCss = require('gulp-inline-css');
 const del = require('del');
 const gulpPostcss = require('gulp-postcss');
 
@@ -76,17 +74,14 @@ function js() {
 
 function bundle() {
     return gulp.src(paths.bundle.src)
-    .pipe(inlineCss())
-    .pipe(inlineSource())
     .pipe(gulp.dest(paths.bundle.dest));
 }
 
 function watch() {
-    gulp.watch(paths.plugin.html, build);
+    gulp.watch(paths.plugin.html.src, build);
     gulp.watch(paths.plugin.css.src,build);
     gulp.watch(paths.plugin.js.src, build);
     gulp.watch(paths.root.src, build);
-    gulp.watch(paths.bundle.src, build);
 }
 
 const build = gulp.series(clean, gulp.series(gulp.parallel( root, html, css, js), bundle));
