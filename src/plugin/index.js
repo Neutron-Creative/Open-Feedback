@@ -4,14 +4,7 @@
 	let help = document.getElementById('sl-of-help');
 	let back = document.getElementById('sl-of-back');
 	let title = document.getElementById('sl-of-id');
-	let content = document.get#sl-of-textarea, #sl-of-submit {
-	transition: box-shadow .2s ease-in;
-	outline: none !important;
-}
-
-#sl-of-textarea:focus, #sl-of-submit:focus {
-	box-shadow: 0 0 0 4px rgba(83,83,236, .5) !important;
-}ElementById('sl-of-content');
+	let content = document.getElementById('sl-of-content');
 	let form = document.getElementById('sl-of-form');
 	let submit = document.getElementById('sl-of-submit');
 	let screenshot = document.getElementById('sl-of-screenshot');
