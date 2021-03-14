@@ -1,0 +1,19 @@
+{
+  "name": "openfeedback",
+  "version": "0.1.0",
+  "description": "The simple open-source feedback collection tool for your website or web-app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neutron-Creative/OpenFeedback.git"
+  },
+  "author": "Neutron Creative Inc.",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Neutron-Creative/OpenFeedback/issues"
+  },
+  "homepage": "https://github.com/Neutron-Creative/OpenFeedback#readme"
+}
