@@ -13,7 +13,7 @@
 	let warning = document.getElementById('sl-of-warning');
 	let widget = document.getElementById('sl-of-widget');
 	let destination, destinationEmoj;
-	let discord_webhook_url = new URLSearchParams(window.location.search).get('discord') || null;
+	let discord_webhook_url = 'https://discord.com/api/webhooks/' + window.OPEN_FEEDBACK_CONFIG.discord || null;
 	
 	bug.addEventListener('click', goto);
 	idea.addEventListener('click', goto);
@@ -28,17 +28,17 @@
 		switch(e.target.id) {
 			case 'sl-of-bug':
 				title.innerText = 'Report an issue';
-				destinationEmoji = '🐛';
+				destinationEmoji = ':bug:';
 				destination = 'Bug report';
 				break;
 			case 'sl-of-idea':
 				title.innerText = 'Make a suggestion';
-				destinationEmoji = '💡';
+				destinationEmoji = ':bulb:';
 				destination = 'Suggestion';
 				break;
 			case 'sl-of-help':
 				title.innerText = 'How can we help you?';
-				destinationEmoji = '❓';
+				destinationEmoji = ':question:';
 				destination = 'Support request';
 				break;
 			default:
@@ -82,7 +82,7 @@
 		var params = {
         	//username: 'OpenFeedback Widget',
 			//avatar_url: '',
-			content: '\n━━━━━━━━━━━━━━━━━━━━\n**New ' + destination + ' from OpenFeedback' + destinationEmoji + '**\n━━━━━━━━━━━━━━━━━━━━\n' + '> **Sent at:**' + date.toString() + '\n> **' + destination + ':** ' + textarea.value + '\n━━━━━━━━━━━━━━━━━━━━'
+			content: '\n**New ' + destination + ' from Open Feedback' + destinationEmoji + '**\n```' + ' Sent at: ' + date.toString() + '\n ' + destination + ': ' + textarea.value + '```\n'
 		};
 		request.send(JSON.stringify(params)); // Send request
 		confirmation.innerText = destination + ' sent successfully, you can expect a reply within 24 hours.'; // Set confirmation alert
