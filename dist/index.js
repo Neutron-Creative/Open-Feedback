@@ -1,0 +1,1 @@
+!function(){let e=document.createElement("div");var t,n,d;t="https://cdn.jsdelivr.net/gh/Neutron-Creative/Open-Feedback/dist/index.html",n=function(t){e.innerHTML=t,document.body.appendChild(e)},(d=new XMLHttpRequest).onreadystatechange=function(){4==d.readyState&&200==d.status&&n(d.responseText)},d.open("GET",t,!0),d.send()}();
