@@ -1,9 +1,9 @@
-#sl-of-textarea, #sl-of-submit {
+#sl-of-textarea, #sl-of-screenshot, #sl-of-submit {
 	transition: box-shadow .2s ease-in;
 	outline: none !important;
 }
 
-#sl-of-textarea:focus, #sl-of-submit:focus {
+#sl-of-textarea:focus, #sl-of-screenshot:focus, #sl-of-submit:focus {
 	box-shadow: 0 0 0 4px rgba(83,83,236, .5) !important;
 }
 
@@ -11,12 +11,12 @@
 	background-color: rgb(243, 244, 246);
 }
 
-#sl-of-bug:hover, #sl-of-idea:hover, #sl-of-help:hover {
+#sl-of-bug:hover, #sl-of-screenshot:hover, #sl-of-submit:hover, #sl-of-idea:hover, #sl-of-help:hover {
 	background-color: rgb(229, 231, 235);
 }
 
 #sl-of-watermark {
-	transition: .2s ease-in;
+	transition: text-shadow .12s ease-in;
 }
 
 #sl-of-watermark:hover {

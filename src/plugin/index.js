@@ -12,6 +12,7 @@
 	let confirmation = document.getElementById('sl-of-confirmation');
 	let warning = document.getElementById('sl-of-warning');
 	let widget = document.getElementById('sl-of-widget');
+	let x = document.getElementById('sl-of-x');
 	let destination, destinationEmoj;
 	let discord = 'https://discord.com/api/webhooks/' + window.OPEN_FEEDBACK_CONFIG.discord || null;
 	
@@ -21,6 +22,7 @@
 	back.addEventListener('click', goBack);
 	submit.addEventListener('click', submitForm);
 	screenshot.addEventListener('click', takeScreenshotJpegBlob);
+	x.addEventListener('click', closeFeedbackPrompt);
 	
 	function goto(e) {
 		console.log('Event');
@@ -82,8 +84,14 @@
 		var params = {
         	//username: 'OpenFeedback Widget',
 			//avatar_url: '',
-			content: '\n**New ' + destination + ' from Open Feedback' + destinationEmoji + '**\n```' + ' Sent at: ' + date.toString() + '\n ' + destination + ': ' + textarea.value + '```\n'
+			content: '\n**New ' + destination + ' from Open Feedback' + destinationEmoji + '**\n```' + 'Sent at: ' + date.toString() + '\n' + destination + ': ' + textarea.value
 		};
+
+		if(window.OPEN_FEEDBACK_CONFIG.user) {
+			params.content += '\nSent by: ' + window.OPEN_FEEDBACK_CONFIG.user + '```\n';
+		} else {
+			params.content += '```\n';
+		}
 		request.send(JSON.stringify(params)); // Send request
 		confirmation.innerText = destination + ' sent successfully, you can expect a reply within 24 hours.'; // Set confirmation alert
 		confirmation.style.display='flex'; // Display confirmation notice
@@ -91,8 +99,19 @@
 		back.style.opacity=0; // Set back button to hidden
 		setTimeout(function() {
 			// Close modal three seconds after submitting
-			widget.style.display='none'
+			closeFeedbackPrompt();
 		}, 3000);
+	}
+	function closeFeedbackPrompt() {
+		document.getElementById('sl-of-widget-container').style.display = 'none';
+	}
+
+	window.closeFeedbackPrompt = function() {
+		document.getElementById('sl-of-widget-container').style.display = 'none';
+	}
+
+	window.openFeedbackPrompt = function() {
+		document.getElementById('sl-of-widget-container').style.display = 'flex';
 	}
 	
 	// docs: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia
