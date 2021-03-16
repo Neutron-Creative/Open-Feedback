@@ -1,6 +1,6 @@
 {
   "name": "openfeedback",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "description": "The simple open-source feedback collection tool for your website or web-app.",
   "main": "index.js",
   "scripts": {

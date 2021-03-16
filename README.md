@@ -3,7 +3,7 @@ The open-source feedback collection tool for your website or web-app.
 
 <p>
     <a href="https://github.com/Neutron-Creative/Singlelink/projects/1">
-        <img src="https://img.shields.io/badge/Work%20In%20Progress-0.1.0-%2303d2d4" alt="Version">
+        <img src="https://img.shields.io/badge/Work%20In%20Progress-0.8.0-%2303d2d4" alt="Version">
     </a>
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
         <img src="https://img.shields.io/badge/License-LGPL-%236ab04c" alt="License"/>
@@ -25,13 +25,21 @@ Add the following code snippet to your desired application somewhere where it wi
 ```html
 <script>
   window.OPEN_FEEDBACK_CONFIG = {
-    "discord_webhook_url": "<your-discord-webhook-here>",
-    "s3_auth": "<your-s3-authentication-string-here>"
+    "discord": "<your-discord-webhook-here>",
   }
 </script>
 <script src="https://cdn.jsdelivr.net/gh/Neutron-Creative/Open-Feedback/dist/index.js"></script>
 ```
 
+<h2>Development</h2>
+To spin up a development environment for Open Feedback, follow the script below and it will automatically create a build from your source-code, spin up a new web-server with an embed to your latest build to test in tmux, and begin watching your files for any changes (to reinitialize the build).<br><br>
+
+```bash
+npm config set -g production false && npm i && npm run dev
+```
+
 <h2>Related</h2>
 
-> Coming soon
+<a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is a free & open-source alternative to <a href="https://feedback.fish">Feedback Fish</a> by the team at <a href="https://singlelink.co">singlelink.co</a>. <a href="https://github.com/Neutron-Creative/Open-Feedback">Open Feedback</a> is 100% self-hosted & unmaintained, <b>so please use at your own risk.</b>
+
+Want to support our open-source development efforts? <a href="https://discord.com/invite/3pBM4Px">Join our Discord</a> and <a href="https://singlelink.co">create a free Singlelink</a>.
