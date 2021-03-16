@@ -7,7 +7,11 @@
         // Add identifier to widget
         widget_container.id='sl-of-widget-container';
         // If in development mode, open widget by default. Else, leave closed.
-        if(window.OPEN_FEEDBACK_CONFIG.development) widget_container.style.display='flex';
+        if(window.OPEN_FEEDBACK_CONFIG.development) {
+            widget_container.style.display='flex';
+        } else {
+            widget_container.style.display='none';
+        }
         // Style widget
         widget_container.style.alignItems='center';
         widget_container.style.justifyContent='center';
