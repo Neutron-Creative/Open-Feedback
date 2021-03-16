@@ -52,6 +52,8 @@
 		back.style.opacity=1;
 	}
 	function goBack() {
+		confirmation.style.display='none';
+		warning.style.display = 'none';
 		form.style.display='none';
 		content.style.display='flex';
 		back.style.opacity=0;
@@ -111,6 +113,7 @@
 	}
 
 	window.openFeedbackPrompt = function() {
+		goBack();
 		document.getElementById('sl-of-widget-container').style.display = 'flex';
 	}
 	
