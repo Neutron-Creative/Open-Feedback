@@ -15,10 +15,6 @@ const paths = {
         src: './src/index.js',
         dest: './dist/'
     },
-    bundle: {
-        src: './dist/plugin/index.html',
-        dest: './dist/'
-    },
     plugin: {
         html: {
             src: './src/plugin/index.html',
@@ -60,7 +56,7 @@ function css() {
     ]))
     .pipe(cleanCSS())
     .pipe(purgecss({
-        content: [paths.plugin.html.src]
+        content: ['**/*.html']
     }))
     .pipe(gulp.dest(paths.plugin.css.dest))
 }
@@ -72,19 +68,18 @@ function js() {
     .pipe(gulp.dest(paths.plugin.js.dest))
 }
 
-function bundle() {
-    return gulp.src(paths.bundle.src)
-    .pipe(gulp.dest(paths.bundle.dest));
-}
-
 function watch() {
+    console.log('Open Feedback: Starting development environment...')
+    console.log('Open Feedback: Creating initial build...')
+    build();
+    console.log('Open Feedback: Watching for changes...')
     gulp.watch(paths.plugin.html.src, build);
-    gulp.watch(paths.plugin.css.src,build);
+    gulp.watch(paths.plugin.css.src, build);
     gulp.watch(paths.plugin.js.src, build);
     gulp.watch(paths.root.src, build);
 }
 
-const build = gulp.series(clean, gulp.series(gulp.parallel( root, html, css, js), bundle));
+const build = gulp.series(clean, gulp.parallel( root, html, css, js));
 
 exports.css = css;
 exports.watch = watch;

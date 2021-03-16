@@ -6,3 +6,21 @@
 #sl-of-textarea:focus, #sl-of-submit:focus {
 	box-shadow: 0 0 0 4px rgba(83,83,236, .5) !important;
 }
+
+#sl-of-back:hover, #sl-of-x:hover {
+	background-color: rgb(243, 244, 246);
+}
+
+#sl-of-bug:hover, #sl-of-idea:hover, #sl-of-help:hover {
+	background-color: rgb(229, 231, 235);
+}
+
+#sl-of-watermark {
+	transition: .2s ease-in;
+}
+
+#sl-of-watermark:hover {
+	text-decoration: underline;
+	color: #5353EC;
+	text-shadow: 0 0 5px rgba(83,83,236,.5);
+}

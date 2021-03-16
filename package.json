@@ -4,7 +4,7 @@
   "description": "The simple open-source feedback collection tool for your website or web-app.",
   "main": "index.js",
   "scripts": {
-    "dev": "node scripts/dev.js;gulp watch;",
+    "dev": "tmux new-session -d -s 'Open_Feedback_Testing_Server' 'http-server --cors -c-1 --proxy http://localhost:8080/dev.html? -d false';node scripts/dev.js;gulp watch;",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +30,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^4.0.2",
     "gulp-uglify-es": "^2.0.0",
+    "http-server": "^0.12.3",
     "open": "^8.0.2",
     "tailwindcss": "^2.0.3"
   }

@@ -2,14 +2,18 @@
     let widget_container = document.createElement('div');
     let discord = new URLSearchParams(window.location.search).get('discord') || null;
 
-    callAjax('https://cdn.jsdelivr.net/gh/Neutron-Creative/Open-Feedback/dist/index.html?discord='+discord, function(response) {
+    callAjax('dist/plugin/index.html?discord='+discord, function(response) {
         
         widget_container.innerHTML = response;
         document.body.appendChild(widget_container);
         
-        let script = document.createElement('script');
-        script.src='dist/plugin/index.min.js';
-        document.body.appendChild(script);
+        let scripts = document.createElement('script');
+        scripts.src='dist/plugin/index.min.js';
+        document.body.appendChild(scripts);
+        let styles = document.createElement('link');
+        styles.rel='stylesheet';
+        styles.href='dist/plugin/index.min.css';
+        document.body.appendChild(styles);
     });
 
     function callAjax(url, callback){
